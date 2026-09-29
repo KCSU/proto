@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package kcsu.lookup.v1;
+
+message GroupSnapshot {
+  string id = 1; // Numeric Lookup group ID, e.g.: "105777"
+  string name = 2; // Lookup group name, e.g.: "kings-sis-ug"
+  string description = 3; // Human-readable description, e.g.: "King's College - SIS - Undergraduates"
+  int64 fetched_at_unix = 4;
+
+  repeated Member members = 5;
+
+  message Member {
+    string crsid = 1;
+    string name = 2;
+  }
+}
