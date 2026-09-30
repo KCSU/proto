@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package kcsu.alerts.v1;
+
+// A critical alert raised by a KCSU service.
+message Alert {
+  // Service raising the alert, e.g.: "library-of-things"
+  string source = 1;
+
+  // Stable name for the problem within the source, e.g.: "database-unreachable"
+  // Used for alert silencing purposes.
+  string dedup_key = 2;
+
+  int64 occurred_at_unix = 3;
+  string summary = 4; // One line, e.g.: "Database unreachable for library-of-things"
+  optional string detail = 5; // Optional longer text
+  map<string, string> extra = 6; // Optional context, e.g.: {"group_id": "105777"}
+}

@@ -4,9 +4,10 @@ Shared Protobuf schemas for KCSU services.
 
 ## Schemas
 
-| Package          | Description                        |
-|------------------|------------------------------------|
-| `kcsu.lookup.v1` | Membership list of a Lookup group. |
+| Package          | Description                                |
+|------------------|--------------------------------------------|
+| `kcsu.lookup.v1` | Membership list of a Lookup group.         |
+| `kcsu.alerts.v1` | A critical alert raised by a KCSU service. |
 
 ## Using it
 
